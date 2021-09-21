@@ -6,3 +6,33 @@
     height: 100%;
     width: 100%;
 }
+
+* {
+    color: white;
+}
+
+button {
+    background-color: #192AC2;
+    height: 63px;
+    border: none;
+    border-radius: 5;
+    box-shadow: 2px 3px 2px #18242C;
+}
+
+button.roundButton {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

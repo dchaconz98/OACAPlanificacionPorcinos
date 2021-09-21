@@ -1,6 +1,37 @@
 <!--Presentación Inicio-->
-<div class="container presentacionBackground">
+<div class="container-fluid presentacionBackground">
 
+    <div class="row" style="padding: 5% 0% 0% 1%;">
+        <div class="col s12">
+            <img src="../../../../../assets/ucvLogoColor.png" alt="logoUcvPng">
+        </div>
+    </div>
+
+    <div class="row" style="padding: 5% 0% 0% 4%;">
+        <img src="../../../../../assets/titulo1.svg" alt="titulo1">
+    </div>
+
+    <div class="row" style="padding: 0.5% 0% 0% 4%;">
+        <img src="../../../../../assets/titulo2.svg" alt="titulo2">
+    </div>
+
+    <div class="row" style="padding: 2% 0% 0% 2.8%;">
+        <div class="col-6">
+            <p style="font-size: large;">Bienvenido a la plataforma de Planificación de Productividad en Porcinos! Conoce las posibilidades de producción de un rebaño porcino.</p>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 6% 0% 0% 2.8%;">
+        <div class="col-2">
+            <button class="btn btn-primary btn-block" (click)="goToSimulation()">Iniciar Simulación</button>
+        </div>
+        <div class="col-9"></div>
+        <div class="col-1">
+            <button class="btn btn-primary roundButton" (click)="scroll(creditos)">
+                <img src="../../../../../assets/arrow-down.svg" alt="arrowDown">
+            </button>
+        </div>
+    </div>
 
     
 
@@ -8,19 +39,70 @@
 </div>
 
 <!--Creditos-->
-<div class="container">
+<div #creditos class="container-fluid">
 
-    <p>Aquí van los creditosss aaAAAAAaaAAAaa</p>
+    <p style="color: black;">Aquí van los creditosss aaAAAAAaaAAAaa</p>
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+       
+
+        <div class="col-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        
+    </div>
+
+    
+
+
     <br>
     <br>
     <br>
