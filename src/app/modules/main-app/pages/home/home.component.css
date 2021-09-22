@@ -1,3 +1,8 @@
+* {
+    color: white;
+    font-family: 'Montserrat';
+}
+
 .presentacionBackground {
     background-image: url('../../../../../assets/facultadDeAgronomiaBg.png');
     background-repeat: no-repeat;
@@ -7,16 +12,12 @@
     width: 100%;
 }
 
-* {
-    color: white;
-}
-
 button {
     background-color: #192AC2;
     height: 63px;
     border: none;
     border-radius: 5;
-    box-shadow: 2px 3px 2px #18242C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 button.roundButton {
@@ -25,14 +26,46 @@ button.roundButton {
     height: 55px;
 }
 
+.creditsBackground {
+    background: linear-gradient(0deg, #0E1621 70%, white 30%);
+}
 
+.creditsTitle {
+    margin: 5% 0% 0% 0% !important;
+    color: black;
+    position: relative;
+    text-align: center;
+    font-size: 285%;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 44px;
+}
 
+.creditsSubtitle {
+    position: absolute;
+    color: black;
+    text-align: center;
+}
+
+mat-card {
+    background-color: #18242C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65) !important;
+}
 
 .example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+    height: 110%;
+}
+
+.cardTitle {
+    margin: 2% 0% 8% 0% !important;
+    position: relative;
+    text-align: center;
+    font-size: 250%;
+    font-style: normal;
+    line-height: 44px;
+}
+
+.studentInfo {
+    margin: 10% 0% 10% 0%;
+}
+

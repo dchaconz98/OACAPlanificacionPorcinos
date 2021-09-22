@@ -8,6 +8,36 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  students : any = [
+    {
+      name: 'José Pérez',
+      email: 'mobilefl44@gmail.com'
+    },
+    {
+      name: 'José Silva',
+      email: 'josesilva2796@gmail.com'
+    },
+    {
+      name: 'Ranvier Padilla',
+      email: 'ranvierpadilla@gmail.com'
+    },
+    {
+      name: 'Diego Chacón',
+      email: 'diegochz98@gmail.com'
+    }
+  ];
+
+  professors : any = [
+    {
+      name: 'Profesora Yosly Hernández',
+      email: 'yoslyhernandez@gmail.com'
+    },
+    {
+      name: 'Profesor Charly Farfán',
+      email: 'charlyfarfan@gmail.com'
+    }
+  ]
+
   constructor(
     private router: Router
   ) { }

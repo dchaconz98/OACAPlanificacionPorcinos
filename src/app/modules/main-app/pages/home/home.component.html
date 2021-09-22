@@ -33,76 +33,76 @@
         </div>
     </div>
 
-    
-
-
 </div>
 
+
+
 <!--Creditos-->
-<div #creditos class="container-fluid">
+<div #creditos class="container-fluid creditsBackground">
 
-    <p style="color: black;">Aquí van los creditosss aaAAAAAaaAAAaa</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
+    <h1 class="creditsTitle">CRÉDITOS</h1>
+
     <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <p class="creditsSubtitle">
+                Equipo de estudiantes y profesores de la Escuela de Computación de la Facultad de Ciencias y de la Facultad de Agronomía de la Universidad Central de Venezuela.
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+    <div class="row" style="margin-top: 5%;">
+        <div class="col-1"></div>
+
+        <div class="col-4">
+            <mat-card class="example-card">
+                <div class="cardTitle">Estudiantes</div>
+                <mat-card-content>
+                    <div *ngFor="let student of students" class="row studentInfo">
+                        <div class="col-3">
+                            <img src="../../../../../assets/mailIcon.svg" alt="arrowDown">
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                {{student.name}}
+                            </div>
+                            <div class="row">
+                                {{student.email}}
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
         <div class="col-2"></div>
-        <div class="col-4">
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-            </mat-card>
-        </div>
-
-       
 
         <div class="col-4">
             <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <div class="cardTitle">Profesores</div>
                 <mat-card-content>
-                  <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                  </p>
+                    <div *ngFor="let professor of professors" class="row studentInfo">
+                        <div class="col-3">
+                            <img src="../../../../../assets/mailIcon.svg" alt="arrowDown">
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                {{professor.name}}
+                            </div>
+                            <div class="row">
+                                {{professor.email}}
+                            </div>
+                        </div>
+                    </div>
                 </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
             </mat-card>
         </div>
 
-        
+        <div class="col-1"></div>        
     </div>
 
     
-
-
     <br>
     <br>
     <br>
