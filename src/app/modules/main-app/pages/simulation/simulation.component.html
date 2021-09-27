@@ -1,1 +1,61 @@
-<p>simulation works!</p>
+<mat-sidenav-container class="example-container" autosize>
+
+    <!--SideNav-->
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+        <mat-nav-list>
+            <mat-list-item (click)="goToHomePage()">
+                <img src="../../../../../assets/logoUCVColor3.1.png" width="41px" alt="logoUcvPng">        
+            </mat-list-item>
+
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+
+            <mat-list-item (click)="goToHomePage()">
+                <mat-icon mat-list-icon>home</mat-icon>
+            </mat-list-item>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+
+    <!--Content-->
+    <div class="example-sidenav-content container-fluid">
+        
+        <div class="container">
+
+            <h6 class="simulationTitle">Ingrese los valores de población animal para ejecutar la simulación...</h6>
+
+            <br>
+            
+
+            <div class="row">
+                <div class="col-5">
+                    Intervalo entre lotes 
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+    <!--Footer-->
+    <app-footer></app-footer>
+
+</mat-sidenav-container>
+
+
+

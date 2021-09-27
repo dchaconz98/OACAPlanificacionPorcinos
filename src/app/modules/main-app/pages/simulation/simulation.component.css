@@ -1,0 +1,24 @@
+.example-container {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #0e1621;
+}
+
+.example-sidenav {
+    user-select: none;
+    background-color: #18242C;
+    border: none;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+}
+
+.simulationTitle {
+    margin-top: 2.5%;
+    font-family: 'Montserrat';
+    font-size: 200%;
+    font-style: normal;
+    line-height: 44px;
+}
