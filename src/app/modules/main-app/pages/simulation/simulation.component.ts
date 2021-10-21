@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -7,7 +8,18 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-simulation',
   templateUrl: './simulation.component.html',
-  styleUrls: ['./simulation.component.css']
+  styleUrls: ['./simulation.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({transform: 'translateY(200%)'}),
+        animate('50ms 600ms ease-in', style({transform: 'translateY(0%)'}))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({transform: 'translateY(-100%)'}))
+      ])
+    ])
+  ]
 })
 export class SimulationComponent implements OnInit {
 
@@ -17,6 +29,8 @@ export class SimulationComponent implements OnInit {
   min = 1;
   step = 1;
   thumbLabel = true;
+
+  mostrarResultados: boolean = false;
 
   constructor(
     private router: Router,
@@ -49,6 +63,8 @@ export class SimulationComponent implements OnInit {
 
   onSubmit() {
     console.log('form data is ', this.simulationForm.value);
+    
+    this.mostrarResultados = true;
   }
 
 
