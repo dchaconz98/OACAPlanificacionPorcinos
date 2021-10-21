@@ -17,8 +17,21 @@
 
 .simulationTitle {
     margin-top: 2.5%;
+    margin-bottom: 5%;
     font-family: 'Montserrat';
     font-size: 200%;
     font-style: normal;
     line-height: 44px;
+}
+
+.form-container {
+    margin-bottom: 10%;
+}
+
+button {
+    background-color: #192AC2;
+    height: 63px;
+    border: none;
+    border-radius: 5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }

@@ -2,18 +2,12 @@
 
     <!--SideNav-->
     <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
-        <mat-nav-list>
+        <mat-nav-list style="height: 100%;">
             <mat-list-item (click)="goToHomePage()">
                 <img src="../../../../../assets/logoUCVColor3.1.png" width="41px" alt="logoUcvPng">        
             </mat-list-item>
 
-            <mat-list-item></mat-list-item>
-            <mat-list-item></mat-list-item>
-            <mat-list-item></mat-list-item>
-            <mat-list-item></mat-list-item>
-            <mat-list-item></mat-list-item>
-
-            <mat-list-item (click)="goToHomePage()">
+            <mat-list-item style="margin-top: 350%;" (click)="goToHomePage()">
                 <mat-icon mat-list-icon>home</mat-icon>
             </mat-list-item>
 
@@ -28,18 +22,179 @@
 
             <h6 class="simulationTitle">Ingrese los valores de población animal para ejecutar la simulación...</h6>
 
-            <br>
             
 
-            <div class="row">
-                <div class="col-5">
-                    Intervalo entre lotes 
-                </div>
-            </div>
+            <form [formGroup]="simulationForm" class="form-container">
 
+                <div class="row">
+                    <div class="col-1"></div>
+
+                    <!-----------Inputs de caja----------->
+                    <div class="col-5">
+                        <div class="container">
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Intervalo entre lotes: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="intervaloEntreLotes" matInput placeholder="Intervalo entre lotes">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">días</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Duración de lactación: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="duracionLactacion" matInput placeholder="Duración de lactación">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">días</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">N° de lechones nacidos vivos: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="numLechonesNacidosVivos" matInput placeholder="N° de lechones nacidos vivos">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">N°</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Peso vivo matadero: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="pesoVivoMatadero" matInput placeholder="Peso vivo matadero">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">Kg</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Vacío sanitario: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="vacioSanitario" matInput placeholder="Vacío sanitario">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">Kg</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Días preparto: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="diasPreparto" matInput placeholder="Días preparto">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">días</label>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="mt-3 col-5">Total de distribución de madres: </label>
+                                <mat-form-field class="col-5" appearance="fill">
+                                    <input formControlName="totalDeDistribucionDeMadres" matInput placeholder="Total de distribución de madres">
+                                </mat-form-field>
+                                <label class="mt-3 col-1">N°</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1"></div>
+
+
+                    <!-----------Inputs de sliders----------->
+                    <div class="col-5">
+                        <div class="container">
+
+                            <div class="row mb-4 mt-5">
+                                <label class="mt-3 col-5">Eficiencia reproductiva: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="eficienciaReproductiva"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.eficienciaReproductiva}}</label>
+                            </div>
+
+                            <div class="row mb-4">
+                                <label class="mt-3 col-5">Mortalidad lactación: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="mortalidadLactacion"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.mortalidadLactacion}}</label>
+                            </div>
+
+                            <div class="row mb-4">
+                                <label class="mt-3 col-5">Mortalidad transición: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="mortalidadTransicion"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.mortalidadTransicion}}</label>
+                            </div>
+
+                            <div class="row mb-4">
+                                <label class="mt-3 col-5">Mortalidad engorde: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="mortalidadEngorde"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.mortalidadEngorde}}</label>
+                            </div>
+
+                            <div class="row mb-4">
+                                <label class="mt-3 col-5">Reemplazo de madres/año: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="reemplazoDeMadresAnio"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.reemplazoDeMadresAnio}}</label>
+                            </div>
+
+                            <div class="row mb-4">
+                                <label class="mt-3 col-5">Reemplazo maccho/año: </label>
+                                <mat-slider
+                                    [max]="max"
+                                    [min]="min"
+                                    [step]="step"
+                                    [thumbLabel]="thumbLabel"
+                                    formControlName="reemplazoDeMadresAnio"
+                                    aria-labelledby="example-name-label">
+                                </mat-slider>
+                                <label class="mt-3 col-1">{{simulationForm.value.reemplazoMachoanio}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button style="margin-left: 45%;" class="btn btn-primary" (click)="onSubmit()">Iniciar Simulación</button>
+                </div>
+
+            </form>
+
+            
+
+            <!--Footer-->
+            <app-footer></app-footer>
 
 
         </div>
+
+
+        
 
     </div>
 
@@ -52,8 +207,7 @@
 
 
 
-    <!--Footer-->
-    <app-footer></app-footer>
+    
 
 </mat-sidenav-container>
 
