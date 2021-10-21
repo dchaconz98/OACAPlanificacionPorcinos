@@ -18,7 +18,7 @@
     <!--Content-->
     <div class="example-sidenav-content container-fluid">
         
-        <div class="container">
+        <div #simulationFormBlock class="container">
 
             <h6 class="simulationTitle">Ingrese los valores de población animal para ejecutar la simulación...</h6>
 
@@ -513,6 +513,16 @@
                             </mat-card-content>
                         </mat-card>
                     </div>
+
+                    <div class="col-5"></div>
+
+                    <div class="col-1">
+                        <button class="btn btn-primary roundButton" (click)="scroll(simulationFormBlock)">
+                            <img src="../../../../../assets/arrow-up.svg" alt="arrowUp">
+                        </button>
+                    </div>
+
+                    <div class="col-1"></div>
 
 
                 </div>

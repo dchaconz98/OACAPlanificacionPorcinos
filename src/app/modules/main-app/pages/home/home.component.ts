@@ -46,10 +46,18 @@ export class HomeComponent implements OnInit {
 
   }
 
+  /**
+   * FUNCTION TO SCROLL TO TARGET
+   *
+   */
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
 
+  /**
+   * FUNCTION TO NAVIGATE TO SIMULATION PAGE
+   *
+   */
   goToSimulation() {
     this.router.navigate(['planificacionPorcinos/simulation']);
   }

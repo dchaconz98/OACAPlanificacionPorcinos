@@ -44,6 +44,14 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
+button.roundButton {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+}
+
 .resultados {
     background-color: rgb(25, 42, 194, 10%);
     width: 100%;

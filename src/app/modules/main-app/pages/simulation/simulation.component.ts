@@ -223,5 +223,12 @@ export class SimulationComponent implements OnInit {
     this.kgCerdosAnioMataderoResult = (this.cerdosLoteResult * this.produccionMesResult * 12 * this.pesoVivoMatadero).toFixed(2);
   }
 
+  /**
+   * FUNCTION TO SCROLL TO TARGET
+   *
+   */
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
 
 }
