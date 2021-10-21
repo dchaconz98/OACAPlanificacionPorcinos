@@ -1,1 +1,128 @@
-<p>home works!</p>
+<!--Presentación Inicio-->
+<div class="container-fluid presentacionBackground">
+
+    <div class="row" style="padding: 5% 0% 0% 1%;">
+        <div class="col s12">
+            <img src="../../../../../assets/ucvLogoColor.png" alt="logoUcvPng">
+        </div>
+    </div>
+
+    <div class="row" style="padding: 5% 0% 0% 4%;">
+        <img src="../../../../../assets/titulo1.svg" alt="titulo1">
+    </div>
+
+    <div class="row" style="padding: 0.5% 0% 0% 4%;">
+        <img src="../../../../../assets/titulo2.svg" alt="titulo2">
+    </div>
+
+    <div class="row" style="padding: 2% 0% 0% 2.8%;">
+        <div class="col-6">
+            <p style="font-size: large;">Bienvenido a la plataforma de Planificación de Productividad en Porcinos! Conoce las posibilidades de producción de un rebaño porcino.</p>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 6% 0% 0% 2.8%;">
+        <div class="col-2">
+            <button class="btn btn-primary btn-block" (click)="goToSimulation()">Iniciar Simulación</button>
+        </div>
+        <div class="col-9"></div>
+        <div class="col-1">
+            <button class="btn btn-primary roundButton" (click)="scroll(creditos)">
+                <img src="../../../../../assets/arrow-down.svg" alt="arrowDown">
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!--Creditos-->
+<div #creditos class="container-fluid creditsBackground">
+
+    <h1 class="creditsTitle">CRÉDITOS</h1>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <p class="creditsSubtitle">
+                Equipo de estudiantes y profesores de la Escuela de Computación de la Facultad de Ciencias y de la Facultad de Agronomía de la Universidad Central de Venezuela.
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+    <div class="row" style="margin-top: 5%;">
+        <div class="col-1"></div>
+
+        <div class="col-4">
+            <mat-card class="example-card">
+                <div class="cardTitle">Estudiantes</div>
+                <mat-card-content>
+                    <div *ngFor="let student of students" class="row studentInfo">
+                        <div class="col-3">
+                            <img src="../../../../../assets/mailIcon.svg" alt="arrowDown">
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                {{student.name}}
+                            </div>
+                            <div class="row">
+                                {{student.email}}
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-2"></div>
+
+        <div class="col-4">
+            <mat-card class="example-card">
+                <div class="cardTitle">Profesores</div>
+                <mat-card-content>
+                    <div *ngFor="let professor of professors" class="row studentInfo">
+                        <div class="col-3">
+                            <img src="../../../../../assets/mailIcon.svg" alt="mailIcon">
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                {{professor.name}}
+                            </div>
+                            <div class="row">
+                                {{professor.email}}
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-1"></div>        
+    </div>
+
+    <div class="row" style="padding: 10%;">
+
+        <div class="col-3">
+            <img src="../../../../../assets/logoFacultadCiencias.svg" alt="logoFacultadCiencias">
+        </div>
+
+        <div class="col-3">
+            <img src="../../../../../assets/LogoEscuelaDeComputacion.svg" alt="LogoEscuelaDeComputacion">
+        </div>
+
+        <div class="col-3">
+            <img src="../../../../../assets/logoUCVColor2.svg" alt="logoUCVColor">
+        </div>
+
+        <div class="col-3">
+            <img src="../../../../../assets/logoFacultadAgronomia.svg" alt="logoFacultadAgronomia">
+        </div>
+
+    </div>
+
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
