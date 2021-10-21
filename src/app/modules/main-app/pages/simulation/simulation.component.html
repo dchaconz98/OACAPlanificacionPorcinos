@@ -36,7 +36,7 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Intervalo entre lotes: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="intervaloEntreLotes" matInput placeholder="Intervalo entre lotes">
+                                        <input formControlName="intervaloEntreLotes" type="number" matInput placeholder="Intervalo entre lotes">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">días</label>
                                 </div>
@@ -44,7 +44,7 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Duración de lactación: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="duracionLactacion" matInput placeholder="Duración de lactación">
+                                        <input formControlName="duracionLactacion" type="number" matInput placeholder="Duración de lactación">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">días</label>
                                 </div>
@@ -52,7 +52,7 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">N° de lechones nacidos vivos: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="numLechonesNacidosVivos" matInput placeholder="N° de lechones nacidos vivos">
+                                        <input formControlName="numLechonesNacidosVivos" type="number" matInput placeholder="N° de lechones nacidos vivos">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">N°</label>
                                 </div>
@@ -60,7 +60,7 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Peso vivo matadero: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="pesoVivoMatadero" matInput placeholder="Peso vivo matadero">
+                                        <input formControlName="pesoVivoMatadero" type="number" matInput placeholder="Peso vivo matadero">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">Kg</label>
                                 </div>
@@ -68,15 +68,15 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Vacío sanitario: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="vacioSanitario" matInput placeholder="Vacío sanitario">
+                                        <input formControlName="vacioSanitario" type="number" matInput placeholder="Vacío sanitario">
                                     </mat-form-field>
-                                    <label class="mt-3 col-1">Kg</label>
+                                    <label class="mt-3 col-1">días</label>
                                 </div>
     
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Días preparto: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="diasPreparto" matInput placeholder="Días preparto">
+                                        <input formControlName="diasPreparto" type="number" matInput placeholder="Días preparto">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">días</label>
                                 </div>
@@ -84,7 +84,7 @@
                                 <div class="row mb-2">
                                     <label class="mt-3 col-5">Total de distribución de madres: </label>
                                     <mat-form-field class="col-5" appearance="fill">
-                                        <input formControlName="totalDeDistribucionDeMadres" matInput placeholder="Total de distribución de madres">
+                                        <input formControlName="totalDeDistribucionDeMadres" type="number" matInput placeholder="Total de distribución de madres">
                                     </mat-form-field>
                                     <label class="mt-3 col-1">N°</label>
                                 </div>
@@ -108,7 +108,7 @@
                                         formControlName="eficienciaReproductiva"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.eficienciaReproductiva}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.eficienciaReproductiva}}%</label>
                                 </div>
     
                                 <div class="row mb-4">
@@ -121,7 +121,7 @@
                                         formControlName="mortalidadLactacion"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadLactacion}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadLactacion}}%</label>
                                 </div>
     
                                 <div class="row mb-4">
@@ -134,7 +134,7 @@
                                         formControlName="mortalidadTransicion"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadTransicion}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadTransicion}}%</label>
                                 </div>
     
                                 <div class="row mb-4">
@@ -147,7 +147,7 @@
                                         formControlName="mortalidadEngorde"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadEngorde}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.mortalidadEngorde}}%</label>
                                 </div>
     
                                 <div class="row mb-4">
@@ -160,7 +160,7 @@
                                         formControlName="reemplazoDeMadresAnio"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.reemplazoDeMadresAnio}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.reemplazoDeMadresAnio}}%</label>
                                 </div>
     
                                 <div class="row mb-4">
@@ -173,7 +173,7 @@
                                         formControlName="reemplazoMachoanio"
                                         aria-labelledby="example-name-label">
                                     </mat-slider>
-                                    <label class="mt-3 col-1">{{simulationForm.value.reemplazoMachoanio}}</label>
+                                    <label class="mt-3 col-1">{{simulationForm.value.reemplazoMachoanio}}%</label>
                                 </div>
                             </div>
                         </div>
@@ -193,12 +193,333 @@
 
                 <h6 class="simulationTitle">Resultados obtenidos...</h6>
 
+                <div class="row mb-5">
+                    <!--Card General-->
+                    <div class="col-5 ml-5">
+                        <mat-card class="example-card">
+                            <div class="cardTitle">General</div>
+                            <mat-card-content>
+                                <div class="row rowInfo">
+                                    <div class="col-6">
+                                        Duración de Gestación
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{duracionGestacionResult}}
+                                    </div>
+                                    <div class="col-1">días</div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-6">
+                                        Intervalo de celos (IDC)
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{intervaloCelosResult}}
+                                    </div>
+                                    <div class="col-1">días</div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-6">
+                                        Intervalo partos/año
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{intervaloPartosAnioResult ? intervaloPartosAnioResult : ''}}
+                                    </div>
+                                    <div class="col-1">días</div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-6">
+                                        Vida útil madres
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{vidaUtilMadresResult}}
+                                    </div>
+                                    <div class="col-1">años</div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-6">
+                                        Producción/mes
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{produccionMesResult ? produccionMesResult : ''}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <!--Card Distribución Madres-->
+                    <div class="col-5">
+                        <mat-card class="example-card">
+                            <div class="cardTitle">Distribución Madres</div>
+                            <mat-card-content>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Total
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{totalResult ? totalResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        N° Lote
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{numLoteResult ? numLoteResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Servicio Lote
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{servicioLoteResult ? servicioLoteResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Lactante
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{lactanteResult ? lactanteResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Gestando
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{gestandoResult ? gestandoResult : ''}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row mb-5">
+
+                    <!--Card Servicio-->
+                    <div class="col-5 ml-5">
+                        <mat-card class="example-card">
+                            <div class="cardTitle">Servicio</div>
+                            <mat-card-content>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Partos/año
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{partosAnioResult ? partosAnioResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Reemplazo hembra/año
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{reemplazoHembraAnioResult ? reemplazoHembraAnioResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Reemplazo hembra/mes
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{reemplazoHembraMesResult ? reemplazoHembraMesResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Reemplazo hembra/sem
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{reemplazoHembraSemResult ? reemplazoHembraSemResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Reemplazo machos/año
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{reemplazoMachosAnioResult ? reemplazoMachosAnioResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Verracos MR
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{verracosMRResult ? verracosMRResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Verraco IA
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{verracoIaResult ? verracoIaResult : ''}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <!--Card Nacimiento y crecimiento por lote-->
+                    <div class="col-5">
+                        <mat-card class="example-card">
+                            <div class="cardTitle">Nacimiento y crecimiento por lote</div>
+                            <mat-card-content>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Lechones nacidos vivos
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{lechonesNacidosVivosResult ? lechonesNacidosVivosResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Mortalidad en lactancia
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{mortalidadEnLactanciaResult ? mortalidadEnLactanciaResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Cerdos destetados
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{cerdosDestetadosResult ? cerdosDestetadosResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Mortalidad en transición
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{mortalidadEnTransicionResult ? mortalidadEnTransicionResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Cerdos para engorde
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{cerdosParaEngordeResult ? cerdosParaEngordeResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Mortalidad en engorde
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{mortalidadEnEngordeResult ? mortalidadEnEngordeResult : ''}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-1"></div>
+                </div>
 
 
+                <div class="row mb-5">
+
+                    <!--Card Producción en engorde-->
+                    <div class="col-5 ml-5">
+                        <mat-card class="example-card">
+                            <div class="cardTitle">Producción en engorde</div>
+                            <mat-card-content>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Cerdos/lote
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{cerdosLoteResult ? cerdosLoteResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Cerdos/mes
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{cerdosMesResult ? cerdosMesResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Cerdos/año
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{cerdosAnioResult ? cerdosAnioResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Kg cerdos/lote/ matadero
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{kgCerdosLoteMataderoResult ? kgCerdosLoteMataderoResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Kg cerdos/mes/ matadero
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{kgCerdosMesMataderoResult ? kgCerdosMesMataderoResult : ''}}
+                                    </div>
+                                </div>
+                                <div class="row rowInfo">
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        Kg cerdos/año/ matadero
+                                    </div>
+                                    <div class="col-4 rowData">
+                                        {{kgCerdosAnioMataderoResult ? kgCerdosAnioMataderoResult : ''}}
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+
+                </div>
+
+                <div class="col-1"></div>
 
             </div>
-
-
 
             <!--Footer-->
             <div class="container">
@@ -206,10 +527,10 @@
                     <app-footer style="width: 100%;"></app-footer>
                 </div>
             </div>
+
+
         </div>
 
-
-        
 
     </div>
 
