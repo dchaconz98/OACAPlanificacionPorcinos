@@ -113,7 +113,7 @@ export class SimulationComponent implements OnInit {
   }
 
   goToHomePage() {
-    this.router.navigate(['planificacionPorcinos/home']);
+    this.router.navigate(['planificacionPorcinos/inicio']);
   }
 
   /**
