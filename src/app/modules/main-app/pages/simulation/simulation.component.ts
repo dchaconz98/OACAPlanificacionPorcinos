@@ -95,13 +95,13 @@ export class SimulationComponent implements OnInit {
   ngOnInit(): void {
 
     this.simulationForm = this.formBuilder.group({
-      intervaloEntreLotes: [null, [Validators.required]],
-      duracionLactacion: [null, [Validators.required]],
-      numLechonesNacidosVivos: [null, [Validators.required]],
-      pesoVivoMatadero: [null, [Validators.required]],
-      vacioSanitario: [null, [Validators.required]],
-      diasPreparto: [null, [Validators.required]],
-      totalDeDistribucionDeMadres: [null, [Validators.required]],
+      intervaloEntreLotes: [null, [Validators.required, Validators.min(1)]],
+      duracionLactacion: [null, [Validators.required, Validators.min(1)]],
+      numLechonesNacidosVivos: [null, [Validators.required, Validators.min(1)]],
+      pesoVivoMatadero: [null, [Validators.required, Validators.min(1)]],
+      vacioSanitario: [null, [Validators.required, Validators.min(1)]],
+      diasPreparto: [null, [Validators.required, Validators.min(1)]],
+      totalDeDistribucionDeMadres: [null, [Validators.required, Validators.min(1)]],
       eficienciaReproductiva: [1, [Validators.required]],
       mortalidadLactacion: [1, [Validators.required]],
       mortalidadTransicion: [1, [Validators.required]],
@@ -113,15 +113,14 @@ export class SimulationComponent implements OnInit {
   }
 
   goToHomePage() {
-    this.router.navigate(['planificacionPorcinos/home']);
+    this.router.navigate(['planificacionPorcinos/inicio']);
   }
 
   /**
    * FUNCTION TO START SIMULATION
    *
    */
-  onSubmit() {
-    console.log('form data is ', this.simulationForm.value);
+  onSubmit(el: HTMLElement) {
     this.setSimulationinputs(this.simulationForm.value);
 
     this.setGeneralCardResults();
@@ -130,7 +129,10 @@ export class SimulationComponent implements OnInit {
     this.setNacimientoYCrecimientoporLoteCardResults()
     this.setEngordeCardResults();
 
-    this.mostrarResultados = true;
+    if (!this.simulationForm.invalid) {
+      this.mostrarResultados = true;
+      this.scroll(el);
+    }
   }
 
   /**
@@ -202,12 +204,12 @@ export class SimulationComponent implements OnInit {
    *
    */
   setNacimientoYCrecimientoporLoteCardResults() {
-    this.lechonesNacidosVivosResult = (this.lactanteResult * this.numLechonesNacidosVivos).toFixed(0);
-    this.mortalidadEnLactanciaResult = (this.lechonesNacidosVivosResult * this.mortalidadLactacion).toFixed(0);
+    this.lechonesNacidosVivosResult = (this.lactanteResult * this.numLechonesNacidosVivos).toFixed(2);
+    this.mortalidadEnLactanciaResult = (this.lechonesNacidosVivosResult * this.mortalidadLactacion).toFixed(2);
     this.cerdosDestetadosResult = this.lechonesNacidosVivosResult - this.mortalidadEnLactanciaResult;
-    this.mortalidadEnTransicionResult = (this.cerdosDestetadosResult * this.mortalidadTransicion).toFixed(0);
-    this.cerdosParaEngordeResult =  (this.cerdosDestetadosResult - (this.cerdosDestetadosResult  * this.mortalidadTransicion)).toFixed(0);
-    this.mortalidadEnEngordeResult = (this.cerdosParaEngordeResult * this.mortalidadEngorde).toFixed(0)
+    this.mortalidadEnTransicionResult = (this.cerdosDestetadosResult * this.mortalidadTransicion).toFixed(2);
+    this.cerdosParaEngordeResult =  (this.cerdosDestetadosResult - (this.cerdosDestetadosResult  * this.mortalidadTransicion)).toFixed(2);
+    this.mortalidadEnEngordeResult = (this.cerdosParaEngordeResult * this.mortalidadEngorde).toFixed(2)
   }
 
   /**
@@ -230,5 +232,17 @@ export class SimulationComponent implements OnInit {
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
+
+  /**
+   * FUNCTION TO VALIDATE NUMERIC INPUTS
+   *
+   */
+  getInputErrorMessage(input: string) {
+    if (this.simulationForm.get(input)?.hasError('required')) {
+      return 'Debes ingresar un valor';
+    }
+    return this.simulationForm.get(input)?.hasError('min') ? 'El valor debe ser mínimo 1' : ''
+  }
+
 
 }

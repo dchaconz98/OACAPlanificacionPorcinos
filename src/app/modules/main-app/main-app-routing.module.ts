@@ -4,8 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SimulationComponent } from './pages/simulation/simulation.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'simulation', component: SimulationComponent },
+  { path: 'inicio', component: HomeComponent },
+  { path: 'simulacion', component: SimulationComponent },
 
 ];
 
