@@ -20,10 +20,15 @@
         
         <div #simulationFormBlock class="container">
 
-            <h6 class="simulationTitle">Ingrese los valores de población animal para ejecutar la simulación...</h6>
+            <h6 class="simulationTitle">Ingrese todos los valores de población animal para ejecutar la simulación...</h6>
+
+            <p class="pr-5 mb-4">La siguiente simulación calcula el movimiento del rebaño porcino y productividad 
+                de la granja según el ciclo y manejo aplicado para estimar los ingresos brutos 
+                de la granja para un ciclo anual. Por favor ingrese todos los campos y luego presione el botón de iniciar simulación...
+            </p>
 
             <!--Formulario-->
-            <div class="container mb-5">
+            <div class="container mb-5 p-4" style="background-color: #18242C; border-radius: 60px;">
                 <form [formGroup]="simulationForm" class="form-container">
 
                     <div class="row">
@@ -180,18 +185,24 @@
                     </div>
     
                     <div class="row">
-                        <button style="margin-left: 45%;" class="btn btn-primary" (click)="onSubmit()">Iniciar Simulación</button>
+                        <button style="margin-left: 45%;" class="btn btn-primary" (click)="onSubmit(simulationResultsblock)">Iniciar Simulación</button>
                     </div>
     
                 </form>
             </div>
             
 
+            <div #simulationResultsblock ></div>
 
             <!--Resultados-->
             <div *ngIf="mostrarResultados" [@slideInOut] class="container resultados pt-2">
 
                 <h6 class="simulationTitle">Resultados obtenidos...</h6>
+
+                <p class="mb-4">Los siguientes resultados son un conjunto de indicadores técnicos asociados a 
+                    la productividad y reproducción porcina que te ayudarán a 
+                    definir metas productivas ajustadas al funcionamiento que tendrá 
+                    la unidad de producción</p>
 
                 <div class="row mb-5">
                     <!--Card General-->

@@ -120,7 +120,7 @@ export class SimulationComponent implements OnInit {
    * FUNCTION TO START SIMULATION
    *
    */
-  onSubmit() {
+  onSubmit(el: HTMLElement) {
     console.log('form data is ', this.simulationForm.value);
     this.setSimulationinputs(this.simulationForm.value);
 
@@ -131,6 +131,7 @@ export class SimulationComponent implements OnInit {
     this.setEngordeCardResults();
 
     this.mostrarResultados = true;
+    this.scroll(el);
   }
 
   /**
