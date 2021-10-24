@@ -59,6 +59,6 @@ export class HomeComponent implements OnInit {
    *
    */
   goToSimulation() {
-    this.router.navigate(['planificacionPorcinos/simulation']);
+    this.router.navigate(['planificacionPorcinos/simulacion']);
   }
 }
